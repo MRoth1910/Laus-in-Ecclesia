@@ -1,5 +1,5 @@
 # Laus-in-Ecclesia
-Materials for the Laus in Ecclesia course in Gregorian chant.
+Materials for the Laus in Ecclesia course in Gregorian chant. Partitions pour la formation en chant grégorien Laus in Ecclesia.
 
 # What is Laus in Ecclesia?
 
