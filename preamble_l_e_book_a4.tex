@@ -1,0 +1,174 @@
+\usepackage{geometry}
+%\pagenumbering{gobble}
+\usepackage{fontspec}
+\usepackage[english,french,ecclesiasticlatin.usej,activeacute]{babel}
+     \babelprovide[hyphenrules=latin]{ecclesiasticlatin}
+\usepackage[compact,nobottomtitles]{titlesec}
+\usepackage{fancyhdr}
+\usepackage{needspace}
+\usepackage{lettrine}
+\usepackage[autocompile]{gregoriotex}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{refcount}
+
+\AtBeginDocument{\setlength{\parindent}{1em}} %% should set 1em to EB Garamond not Computer Modern.
+
+%% General scale of all graphical elements. Also borrowed from MB
+%% Values different from 1 are largely untested per MB
+%% Used in those commands (e.g. everything FontSpec) that use a scale parameter.
+\newcommand{\customscale}{1}
+
+\makeatletter
+\newcommand{\YEAR}{\@Roman{\the\year}}
+\makeatother
+
+\geometry{letterpaper}
+\geometry{bindingoffset=0.5in,
+inner=1in,
+outer=1.35in,
+top=1.25in,
+bottom=1.25in,
+headsep=0.75in
+} %%
+
+\setmainfont{EB Garamond}[UprightFont=EB Garamond Regular,
+ItalicFont= EB Garamond Italic,
+BoldFont= EB Garamond Bold,
+Ligatures=Rare,
+Numbers=Proportional,
+Numbers=OldStyle]
+
+\NewDocumentCommand\capspace{m}{{\addfontfeature{LetterSpace=5.0}{#1}}}
+\NewDocumentCommand\scspace{m}{\textsc{{{\addfontfeature{LetterSpace=5.0}{#1}}}}}
+
+%% should prevent flat turning custos into a clef, as Solesmes  uses an altered custos in only one chant per Élie Roux.
+\gresetcustosalteration{invisible}
+
+%produces a score with a smaller initial (default is 40 pt) and annotations like in the Solesmes books; the 1st is optional and can be omitted as needed.
+ \NewDocumentCommand{\gscore}{O{}mm}{%
+ \greannotation{#1}%
+\greannotation{#2}%
+\grechangestyle{initial}{\fontsize{28}{28}\selectfont}%
+ \gregorioscore{partitions/#3}}
+ 
+
+  \NewDocumentCommand{\initialscore}{O{}m}{%
+      \grechangedim{initialraise}{0.5cm}{scalable}%
+  \greannotation{#1}%
+   \grechangestyle{initial}{\fontspec{EB Garamond Initials}\fontsize{45}{45}\selectfont}%
+ \gregorioscore{partitions/#2}
+   \grechangedim{initialraise}{0cm}{scalable}}
+
+%% score with no initial, e.g psalms, common tones, etc.
+\newcommand{\smallscore}[2][y]{
+  \gresetinitiallines{0}
+  \gregorioscore{partitions/#2} %% à remplacer avec NewDocumentCommand ; les arguments ne marchent pas correctement … que fait le [y] ?
+  \gresetinitiallines{1}
+}
+
+%% sets * and † to font called via fontspec
+\def\GreStar{*}
+\def\GreDagger{†}
+
+\gresetspecial{V/}{{\fontspec[Scale=\customscale]{EB Garamond}℣.~}}
+\gresetspecial{R/}{{\fontspec[Scale=\customscale]{EB Garamond}℟.~}}
+\gresetspecial{+}{{\fontspec[Scale=\customscale]{EB Garamond}†~}}
+\gresetspecial{*}{\gresixstar}
+\gresetspecial{cross}{\cc}
+
+%% fine-tuning the behavior of text placed under bars. We use the so-called "new algorithm" which
+%% places the bar in the middle of surrounding notes, and the text in the middle of surrounding text.
+%% however, we restrict drastically the deviation of the text from the position of the bar.
+\grechangedim{maxbaroffsettextleft}{0.5mm}{scalable}
+\grechangedim{maxbaroffsettextright}{0.5mm}{scalable}
+
+\NewDocumentCommand{\zerobaroffsettextleft}{}%
+{%
+\grechangedim{maxbaroffsettextleft}%
+{0cm}%
+{scalable}%
+}
+
+\NewDocumentCommand{\zerobaroffsettextright}{}%
+{%
+\grechangedim{maxbaroffsettextright}%
+{0cm}%
+{scalable}%
+}
+
+%%%the default for left bar offset is 0.3cm. Right is 0.15cm. This needs to be applied after a score where the bar offset is modified.
+\NewDocumentCommand{\resetbaroffsettextleft}{}%
+{%
+\grechangedim{maxbaroffsettextleft}%
+{0.5mm}%
+{scalable}%
+}
+
+\NewDocumentCommand{\resetbaroffsettextright}{}%
+{%
+\grechangedim{maxbaroffsettextright}%
+{0.5mm}%
+{scalable}%
+}
+
+\NewDocumentCommand{\bigtitle}{m}{
+\needspace{5\baselineskip}  %% very small if there are neumes above the staff, including flats in mode 2, e.g. O Doctor optime
+\vspace{\baselineskip}
+ {\centering{\large#1}\par}
+}
+
+\NewDocumentCommand{\smalltitle}{m}{
+\needspace{5\baselineskip}  %% very small if there are neumes above the staff, including flats in mode 2, e.g. O Doctor optime
+\vspace{\baselineskip}
+ {\centering #1\par}
+}
+
+
+\NewDocumentCommand{\rubrique}{m}{%
+    {%
+        \fontsize{10}{12}%
+        \selectfont%
+        \textit{%
+        %
+        #1%
+    }%
+    }}
+    
+%% macro to print normal text inside of rubric (name of a chant or prayer, etc.)
+
+\NewDocumentCommand{\normaltext}{m}{%
+    {%
+        \normalfont%
+        #1%
+    }%
+    }
+    
+    \NewDocumentCommand{\bigrule}{}{%
+    \par%
+    {%
+        \centering%
+        \rule{0.6\textwidth}{0.4pt}%
+        \par%
+    }% typesets a horizontal rule like on the page with the prayers before and after the office.
+}  %%If you're using color at all in your document, you might want to either force \myrule to use black or make it cusotmizable. (from u/Independent-Comb-257)
+
+
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+\renewcommand\headrulewidth{0.4pt}
+
+\fancyhead[RO]{\small{\addfontfeature{LetterSpace=5.0}\rightmark}\hspace{1cm}\thepage}
+\fancyhead[LE]{\small\thepage\hspace{1cm}{\addfontfeature{LetterSpace=5.0}LAUS IN ECCLESIA : CHANTS}}
+
+\titleformat{\section}[display]{\huge\filcenter\sc\addfontfeature{LetterSpace=5.0}}{}{0pt}{} 
+\titleformat{\subsection}[display]{\large\scshape\filcenter\addfontfeature{LetterSpace=5.0}}{}{}{}
+\setcounter{secnumdepth}{0}
+\titlespacing{\section}{0pt}{*0}{*0}
+
+% \NewDocumentCommand{\mysection}{m}{\section{#1}\setheaders{{\scshape\addfontfeature{LetterSpace=5.0}#1}}{{\scshape\addfontfeature{LetterSpace=5.0} #1}}}
+ 
+\NewDocumentCommand{\header}{m}{\setheaders{{\scshape\addfontfeature{LetterSpace=5.0}#1}}{{\scshape\addfontfeature{LetterSpace=5.0} #1}}}
+
+\addto\captionsecclesiasticlatin{\renewcommand\contentsname{\centerline{Table of Contents. Table de matières.}}}
