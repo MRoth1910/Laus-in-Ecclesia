@@ -3,7 +3,7 @@ Materials for the Laus in Ecclesia course in Gregorian chant. Partitions pour la
 
 # What is Laus in Ecclesia?
 
-It is a course in Gregorian chant originally developed as a correspondance course by the Schola Saint-Grégoire of Le Mans (France) and modified in its present form by the monks of Triors (also in France). The English version was developed and is admininistered by the monks of Clear Creek in the state of Oklahoma, and the book has been translated into Polish as well (if not more languages unknown to me).
+It is a course in Gregorian chant originally developed as a correspondence course by the Schola Saint-Grégoire of Le Mans (France) and modified in its present form by the monks of Triors (also in France). The English version was developed and is administered by the monks of Clear Creek in the state of Oklahoma, and the book has been translated into Polish as well (if not more languages unknown to me).
 
 # What's the point here?
 
