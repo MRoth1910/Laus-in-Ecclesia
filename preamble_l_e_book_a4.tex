@@ -172,3 +172,11 @@ Numbers=OldStyle]
 \NewDocumentCommand{\header}{m}{\setheaders{{\scshape\addfontfeature{LetterSpace=5.0}#1}}{{\scshape\addfontfeature{LetterSpace=5.0} #1}}}
 
 \addto\captionsecclesiasticlatin{\renewcommand\contentsname{\centerline{Table of Contents. Table de matières.}}}
+
+\NewDocumentEnvironment{enpars}{}
+  {\begin{otherlanguage*}{english}}
+  {\par\end{otherlanguage*}}
+  
+  \NewDocumentEnvironment{frpars}{}
+  {\begin{otherlanguage*}{french}}
+  {\par\end{otherlanguage*}}
