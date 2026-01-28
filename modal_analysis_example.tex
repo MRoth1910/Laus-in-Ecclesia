@@ -1,0 +1,300 @@
+% !TEX TS-program = lualatexmk
+% !TEX parameter =  --shell-escape
+
+\documentclass[11pt]{book}
+
+\input{preamble_l_e_book}
+\usepackage{ifthen}
+\let\SAVEgregorioscore\gregorioscore
+\renewcommand{\gregorioscore}[2][]{%
+  % For a simple solution, assume the file is specified without extension.
+  \typeout{!!!!!!!!!!!!!!!!Tell latexmk I'm reading the gabc file}%
+  \typeout{(partitions/#2.gabc)}%
+  % Use old-fashioned methods to invoke the saved macro, since it doesn't
+  % obey the modern LaTeX syntax for options:
+  \ifthenelse{\equal{#1}{}}%
+    {\SAVEgregorioscore{#2}}%
+    {\SAVEgregorioscore[#1]{#2}}%
+}
+%\gresetnabcfont{gresgmodern}{12}
+\usepackage{longtable}
+
+\begin{document}
+\thispagestyle{empty}
+\bigtitle{Modal analysis of a piece.}
+
+\gscore[Intr.]{2.}{in_ecce_advenit_solesmes_1961}
+
+Behold, the Lord and Ruler is come, and the kingdom is in his hand, and power, and dominion. O God, with thy judgment endow the King, and with thy justice, the King’s Son.
+℣. Glory be to the Father (Cf. Malachi 3:1, 1 Par. 29:12).
+
+\smalltitle{Initial textual and melodic analysis.}
+
+This chant, as we see from the annotation, is an introit. We know therefore before learning anything else that it belongs to the repertoire of the holy Mass; indeed, it comes from one of the church's most solemn and ancient feasts, the Epiphany, celebrated twelve days after Christmas. Here the church recalls the manifestation of the Incarnate Son's divinity first to the nations, then to the Jewish people, and to the Jews but also his inner circle, the ``three miracles'': the adoration of the Magi, the baptism of the Lord by John the Baptist, and the conversion of the water into wine at Cana. Thus, in celebrating this feast, the church proclaims again in every day and age that which the Christ himself announced unto the world first by simply appearing in the form of a human person, a man — and as an infant no less, when the Magi come to adore him — that which he really was, and by working miracles as he does at Cana.
+
+The texts of the holy Mass largely focus on the story of the Magi, but the collect and gospel are changed on the octave day, that is, on January 13, and the introit is not directly tied to the story of the Magi, unlike the other propers, which speak variously of the star, of kings coming from the East, and of the gifts which they bring.
+
+This melody will become familiar to those who sing the Mass regularly, for it is largely shared with the introit \textit{Salve, sancta Parens,} sung for Masses taken from the Common of the Blessed Virgin Mary, albeit in a slightly simpler, less ornamented form. The Mother of God's role is, if indirectly and unintentionally, remains a part of the holy season, as we pass from the Nativity where she is truly a main character to one where she begins to fade into the background, although not entirely, for she herself initiates the miracle of Cana. But to be in the background is for the humbled to be exalted, for she is revealed as Advocate and Mediatrix of All Graces for her children. Ditto the Forerunner, the subject of the verse on which this is loosely based or rather from which it is adapted. ``I must decrease, so that he might increase.'' John is a major figure of the season of Advent and last figures in the mystery of the Epiphany, in the temporal cycle, as he baptizes his divine relative in the waters of the Jordan. Then he steps aside for the Redemption to completely unfold by the one who is its actor and indeed cause.
+
+This text of the prophet Malachi pertains to divine worship, to which John would have been closely connected especially in his youth being himself a Levite, the son of a priest, and therefore to the death and ressurrection of Our Lord. Saint Augustine comments thusly in \textit{De Civitate Dei:}
+
+\begin{quote}
+Speaking further of Christ in the same vein, Malachi says, “Behold, I send my angel, and he shall prepare the way before my face. And presently the Lord, whom you seek, and the angel of the testament whom you desire, shall come into the temple. Behold, he comes, says the Lord of hosts. And who shall be able to think of the day of his coming? And who shall stand to see him?” In this text he foretells both comings of Christ, the first and the second—the first where he says, ``And presently the Lord shall come into his temple.” This refers to Christ’s body, of which he himself said in the Gospel, ``Destroy this temple, and in three days I will raise it up.'' His second coming is foretold in these words: ``Behold, he comes, says the Lord of hosts. `And who shall be able to think of the day of his coming? And who shall stand to see him?''
+\end{quote}
+
+
+The church prepared the faithful for this second coming throughout the season of Advent, even as she prepared her children for celebrating the Incarnation as a moment in time, that is, as a historical event that happened with witnesses and records. But it and the subsequent proclamation of the Word to the nations points to that coming again in glory to judge the living and the dead, of he whose kingdom shall therefore have no end. If we also examine the psalm, Christ is the Messiah, the king in the line of David, just as Solomon was, but unlike he, Christ is perfectly just, and the Father keeps his promises: he grants not only judgement unto the King, just as he promised, but in addition to the ``wisdom, knowledge, riches, wealth, and honor'' never seen before or, until Christ and only Christ, after (cf. 2 Par. 1:12), the Father's only-begotten son, with whom he is well-pleased, is most unlike Solomon in this respect.
+
+As Saint Augustine notes, the psalm begns ``A prophecy of the coming of Christ, and of his kingdom: prefigured by Solomon and his happy reign.'' Christ is the Mediator and Advocate as Saint Paul writes, and he is the true peacemaker or indeed Prince of Peace celebrated in the introit twelve days ago, on the Nativity. It is through the Passion that we are reconciled to the Father and therefore given the peace which surpasses all understanding. If we were to continue with the psalm alone, one would see that it is intimately connected to the Epiphany and to the announcement of Christ and his kingdom over the nations, such that it figures prominently in the other parts of the day's liturgy.
+
+The divine simplicity of the mysteries of the Incarnation and the manifestation of this mystery to the world for the first time come forth through this melody, which has a tight range, beginning admittedly on La at the bottom of the ambitus of mode \scspace{ii} but extending essentially from Do to Sol after the incipit concludes. In general, it ascends as much as a melody can within a narrow range, without much elaboration of any one syllable. The melodic peak on Sol occurs thrice: in the cadence, or pre-cadence at least, of the first phrase, on the accent of \textit{Dóminus;} then in the first and second incises, and indeed in the final pre-cadence, again on the accented syllables, of \textit{potéstas} and \textit{impérium.} In contrast, the melody begins to fall, and carries the most notes per syllable, penultimate syllable of \textit{Dóminus,} which is subsequently mirrored with the emphasis at the accents of \textit{manu ejus} at the end of the second phrase, then again at the penultimate syllable of \textit{impérium}. The melodic and textual relationship is threefold, just like the threefold miracles, forming a sort of chiasm.
+
+
+%\smalltitle{Neumatic analysis.}
+
+%{\centering{Neumatic analysis.}\par} 
+%%\thispagestyle{empty} 
+%%\label{kalendarium} %%will need to fix the label later
+
+Syllables are given a hyphen before and after to signal that they are not monosyllables, initial syllables, or word-final syllables; the latter two are given hyphens after the last letter or before the first, as usual. The source of the chant is the \textit{Liber Usualis,} 1934, nº 780, p. 459. Some forms are given here based purely on the conventions of square notation; their actual forms will be elaboraated upon with reference to adiastematic neumes.
+
+\setlength\LTleft{0pt}
+\setlength\LTright{0pt}
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.4}
+%\fontsize{8}{9}\selectfont
+
+ \begin{longtable}[c]{c | c }
+  \caption{Neumatic analysis.\label{neume_table}}\\
+& Fa clef on the third line \\
+ Ec- &  developed scandicus \\
+ 
+  -ce &  dotted punctum \\
+  
+& asterisk and quarter bar \\
+
+ad- & cephalicus \\
+
+-vé- & punctum + quilisma podatus flexus, marked with an episema \\
+
+-nit & dotted punctum \\
+
+& quarter bar  \\
+
+dó- & punctum \\
+
+mi- & bistropha \\
+
+-ná- & punctum \\
+
+-tor & punctum \\
+
+Dó- & podatus subbipunctis \\
+
+-mi- & clivis + porrectus forming a pressus \\
+
+-nus & two dotted puncta \\
+
+& full bar followed by custos \\
+
+et & epiphonus \\
+
+re- & punctum \\
+
+-gnum & tristropha \\
+
+& quarter bar \\
+
+in & cephalicus \\
+
+má- & præpunctis + punctum + clivis + clivis \\
+
+-nu & pes \\
+
+e- & pes + clivis + climacus with an episema\\
+
+-jus & two dotted puncta \\
+
+& full bar \\
+
+et & punctum \\
+
+pot- & bistropha \\
+
+-é- & pes \\
+
+-stas & dotted punctum \\
+
+& quarter bar \\
+
+et & scandicus \\
+
+& custos \\
+
+im- & punctum \\
+
+-pé- & podatus subbipunctis \\
+
+-ri- &clivius + porrectus forming a pressus \\
+
+-um & two dotted punctum \\
+
+& double bar (followed by psalm verse)
+ 
+  \end{longtable}
+
+
+%\smalltitle{Melodic analysis.}
+ \begin{longtable}[c]{c | c}
+  \caption{Melodic analysis.\label{melody_table}}\\
+ Ec- & La-Do-Re-Mi \\
+ 
+ -ce & Re \\
+
+ad-  & Re-Do   \\
+
+-vé- & Re-Mi-Fa  \\
+
+-nit & Re  \\
+
+dó- & Do\\
+
+-mi- & Fa-Fa \\
+
+-ná- & Fa \\
+
+-tor & Fa \\
+
+Dó- & Fa-Sol-Fa-Mi\\
+
+-mi- & Fa-Mi-Mi-Re-Mi\\
+
+-nus & Mi-Re \\
+
+et & Do-Fa \\
+
+re- & Fa\\
+
+-gnum & Fa-Fa-Fa\\
+
+in & Re-Do\\
+
+má- & Re-Fa-Fa-Re-Mi-Re \\
+
+-nu & Do-Re\\
+
+e- & Re-Fa-Fa-Re-Mi-Re-Do \\
+
+-jus &Re-Do \\
+
+et & Re \\
+
+pot- & Fa-Fa\\
+
+-é- & Fa-Sol\\
+
+-stas & Re\\
+
+et & Re-Fa-Sol \\
+
+im- & Sol \\
+
+-pé- &Fa-Sol-Fa-Mi \\
+
+-ri- & Fa-Mi-Mi-Re-Mi\\
+
+-um & Mi-Re \\
+
+  \end{longtable}
+
+\smalltitle{Rhythmic analysis.}
+
+For convenience, the silent pulses (either the downbeat and upbeat or simply the downbeat) at bars are written with the final punctum before the bar line (this also applies to the arsis or thesis of the compound rhythm); the ternary groups are written with the third beat on the corresponding syllable.
+
+\gscore[Intr.]{2.}{ecce_advenit_er}
+
+Few difficulties present themselves in counting, at least in following the square notation without reference to the ancient neumes, in which case different decisions might be made at \textit{ejus} in particular. The first full bar is given a rest of a full composite pulse, the second only the downbeat. The few ternary groups are relatively simple and arise either from an isolated punctum especially those following a long note, or after a neume of two notes before another such neume, in addition to a trisophtra or a descending neume that is, in isolation, three notes and therefore a ternary composite pulse.
+
+\gscore[Intr.]{2.}{ecce_advenit_cp}
+
+\textit{Ecce:} The developed salicus at the beginning calls for an arsis, followed by a thesis at the \textit{mora vocis} that lead, at the beginning, to the introduction of the whole schola. 
+
+\textit{advénit:} The beginning of the first incise followed by a podatus quilisma are both always arsic, as is the local peak but the \textit{mora vocis} is thetic.
+
+\textit{dominátor:} Here we can go to arsis and thesis to ensure that the incise has at least one arsis.
+
+\textit{Dóminus:} The podatus ascends and is the melodic peak of the piece (which repeats later on); the rest descends to the full bar, so it is thetic.
+
+\textit{et:} This is an arsis, as the first ascending neume which should have restrained power.
+
+\textit{regnum:} The tristropha should be gentle and in thesis.
+
+\textit{in:} Although the neume descends and is lower than the preceding neume, it begins the second incise and so here we give it an arsis even on a weak monosyllable.
+
+\textit{manu ejus:} The next ictus finds itself above the last, but this leads to the cadence in a descent, so we take the rest in thesis.
+
+\textit{et:} It is arsic, with the downbeat taken as the breath.
+
+\textit{potéstas:} What is given in the Vatican Edition as a bistropha is thetic no matter how it is sung, whereas the pes on the tonic accent is arsic, followed by an obligatory thesis on the dotted punctum to end the incise.
+
+\textit{et:} The scandicus written here is like a salicus for the Solesmes method and for our purposes overall, and at the beginning of the incise especially, the ascent makes it arsic.
+
+\textit{impérium:} The podatus at the melodic peak repeats again as an arsis; the rest descents to the final cadence and is therefore thetic.
+
+\smalltitle{Modal analysis.}
+
+The piece begins on La below the four-line staff, suggestive of the protus mode, but especially of the plagal, that is, mode \scspace{ii}. The piece occupies if only for its first interval the lower fourth and only just rises into the upper fifth, having an ambiitus of La to Sol; although mode \scspace{i} can descend to the extremity of the lower fourth, and mode \scspace{ii} can rise to Si (flat), nevertheless, only the latter occupies such a narrow ambitus so consistently. The assignment of this chant to mode \scspace{ii} in the Vatican Edition is therefore consistent with our description of the modes, wherein mode \scspace{ii} has as its final Re, the dominant Fa, an upper fifth extending to La and a lower fourth descending to La.
+
+We can examine the structural notes of the whole mode, including also the final, as an introit such as this makes it relatively easy to count the total number of notes; there are seventy-three, of which twenty-four are Fa. We find Re twenty-two times. So two-thirds of the chant is sung not just within a third, it is sung on two notes of that third, those composing the dominant and final of mode \scspace{ii}. Mi comes in fourteen times, Do, coming below the final as what is sometimes called the subtonic, ornaments or supports Re six times, both coming down from Re, going back to the final, or as a destination in itself at the end of the second phrase. Sol only occurs four times in the chant, despite being a structural note, and it decorates the dominant as the melodic peak in essentially the same way as it does in the modern psalm tone with a podatus or similar neume on Fa-Sol.
+
+There are both leaps of a third Re-Fa, as well as four examples of a descent Fa-Re, and even two instances of an ascending fourth from Do, covering both the characteristic third and also a fourth, an interval not uncommon in this mode, although here it is from the subtonic to the dominant rather than from the final to the structural note a whole step above the dominant. Mi still has its place; it never serves as a point of arrival or departur, however. We do not pass into the third or fourth modes. Mi is used to support the dominant and final as the step in between these notes at the end of phrases (to include \textit{manu ejus} as a whole). We have examples of Re-Mi-Re (\textit{Ecce, }\textit{manu,} \textit{ejus,}) and Re-Mi (\textit{ejus}), as well as the powerful quilisma Re-Mi-Fa as stepwise motion from the final to the dominant at \textit{advénit,} which gives an early hint of finality: yes, by its nature, coming to ``home base'' in the mode achieves this, but this is a melodic figure that occurs in the mode relatively frequently, notably in an alleluia formulary. Here, however, it serves as part of the opening declaration.
+
+The same podatus subbipunctiss Fa-Sol-Fa-Mi followed by Fa-Mi-Mi-Re-Mi occurs at \textit{Dóminus} and \textit{impérium.} The half step remains central to the piece in that sense, as we have minor thirds in both directions and stepwise motion, but the minor third does not give the haunting effect as it does in mode \scspace{iii} and especially \scspace{iv} when transposed to a descending Sol-Mi especially at the final cadence of the entire piece, and Sol, although a structural note of both the authentic and plagal protus, is also absent except to ornament Fa, so we cannot consider that this piece truly modulates into the authentic mode either.
+
+As noted above, the piece is essentially chiastic. The first and third (final) cadence have identical neumes save an extra punctum, a Sol decorating the following Fa, to account for an extra syllable. This neume ends on the final Re, whereas the cadence of the second phrase takes us to Do, and while the other cadence takes us by stepwise motion from the dominant back to the final, at \textit{ejus,} we leap Re-Fa only to descend that way again, then we pass by steps from Mi to Do, back to the final which it decorates only to end the phrase on Do.
+
+This piece is comprised only of incises and phrases; there are no half bars and therefore no members. The first incise begins with a motif essentially of this mode, and it ends on the final having come to it from Mi somewhat timidly, whereas the next incise is full of energy particularly from the quilisma mentioned above going stepwise from Re to Fa, only to descend by a leap to Re again, but it is given some finality by the repetition of Re on the last syllable of \textit{ advénit.} The slight transposition, not of the mode, but of the place within the mode, occurs at the first incise of the second phrase, where we have a repetition of the Do-Fa leap present already in the first phrase in the second incise (hence the sort of chiasm or parallelism), before transitioning to a repetition of the dominant Fa. In passing, we note again that the half step is especially highlighted because the bistropha and tristropha are repeated notes here, and they occur at the half step; three (with one being a bivirga in reality) occur in the chant as a whole. The first incise of the final phrase mirrors the previous, but in this case, we have Re-Fa leaps and descents, with Sol ornamenting the Fa, which also occurs at the beginning of the second incise, the last one of the chant.
+
+This chant, due to its tight composition, gives notes which are clearly seen in relation to the final, the dominant, and the structural notes or modal chords as they are sometimes called. Only the Do and Mi do not figure in that list, and as they are the note either below the final or between the final and dominant and also therefore a third below the other structural note, we can clearly see their importance.
+ 
+\smalltitle{Chant with adiastematic neumes of Einsiedeln 50, \textit{Graduale Triplex,} 1979 (Solesmes), p. 56.}
+
+\gscore[Intr.]{2.}{in_ecce_advenit_solesmes_e50}
+
+\smalltitle{Semiological analysis.}
+
+The psalm verse has adiastematic notation in E. 50. Although it is not strictly part of the study of this chant in particular, the neumes given are indeed the basis of the psalmody of the second mode, albeit with a slightly different neumatic construction before the mediant. It should be noted that in the Swiss manuscript tradition (generally referred to as SG, however imprecisely, since this notation comes from an Einsiedeln manuscript instead) the punctum is replaced by the virga for the psalmody as the ordinary note.
+
+It is helpful to note that the overall shape of the melody is consistent with Dom Cardine's tables, that is, if one compares the notes of the Vatican Edition, it is hard to disagree with the neume identification.
+
+Moreover, save one punctum given a dot, justifiably, in light of its position at the end of the first incise following the incipit, the long or nuanced notes are marked with an episema in the original manuscript, faithfully translated according to context (by an episema or dot).
+
+Nevertheless, one could substitute an apostrophe at ``-num'' in \textit{regnum;} if one chose to repercuss these notes (even though this is not typical of the Solesmes method) in light of the shared understanding, from Mocquereau to Cardine and beyond, that these notes at the unison were originally repercussed, one could draw out the eternal kingdom of Christ, so long as an echo effect was avoided, in referring via the music to the gentle empire of his love.
+
+There are in fact bivirga at ``mi-'' of \textit{dominátor} and ``po-'' of \textit{potéstas,} occupying the same place, at beginning of the incise, approaching the dominant, from the subtonic Do and the final Re in each case respectively; one should take care in that this is a weak preaccentual syllable, but nevertheless some nuance should be given to distinguish these from the strophic notes, which clearly exist in the adiastematic notation.
+
+At \textit{impérium,} the accent could be drawn out with more emphasis in recognizing that the podatus subbipunctis ought to be a climacus præpunctis, with the virga at the highest note; perhaps in the Solesmes method, one finds here a distinction without a difference, such that neumes ought to be interpreted according to the context, both when translating adiastematic neumes to square notation and when interpreting the latter for the sacred liturgy, and that the notation of the Vatican Edition, in the context gives the key to the desired result. Nevertheless, one could give yet still a slightly greater hesitation, even more than already suggested by the final \textit{ritardando} of the final incise of the third and final phrase as the melody peaks briefly to descend to the final drawing out even further the mystery of Christ's revelation to the nations. One can hardly rush a descent in the chant; in like manner, the first and second comings of Christ in majesty should be considered.
+
+This is not to say that all notes with divergences need transformation: the virga of \textit{regnum,} although on the accented syllable, is isolated and should not be sung too harshly which might be the case if we used a single virga in lieu of the single punctum given in the Vatican Edition.
+
+But there are some problems: at \textit{manu,} the neume that we ordinarily assimilate in the method of Solesmes to a pressus is in fact a præpunctum followed by a trigon, which is more gentle and therefore more like the oriscus; the clivis follows just as it does the pressus, and the second clivis is sung according to context. The trigon neume always appears around the the half step Re-Fa (another helpful indicator that we are in mode \scspace{ii} or at least in the protus mode), and it is unique to Saint-Gall; some scholars suggest that it reveals microtonality, i.e. a quarter tone, but we do not have any certainty.
+
+Further, at \textit{ejus,} the first neume is indeed a podatus or pes, followed by what appears in modern square notation as a cliivis followed by a climacus, and we see that the adiastematic neume from the E. 50 manuscript resembles both a clivis and a climacus with a dimunative liquescent, but it is in reality a porrectus flexus subpunctis; the ``correct'' graphical form would not change the elementary rhythm if we do not wish to repercuss at the first note of the second neume (the clivis/porrectus), but if we do, then we might reconsider it. In any case, we have descending neumes that prepare the cadence at the end of the second phrase.
+
+In contrast, the scandicus marked with a vertical episema at \textit{et} is actually a salicus; here, there is no real problem, because the interpretation following Dom Gajard's teaching aligns the two neumes, and in this case, the what Dom Cardine gives as a salicus resembles this form of the scandicus in the Vatican Edition, a pes followed by a virga.
+
+The novice or intermediate chorister will not need to perform such an analysis, but the choirmaster and cantors should do so, and in this case, the chant is as simple as it appears with few real difficulties emerging. In fact, these areas of emphasis are largely treated one way or another in the method of Solesmes, and the only place where the notation does not sufficiently match the interpretation is at the bivirga, which can only be recognized through semiological study, 
+\smalltitle{Synthesis and interpretation.}
+
+The introit Ecce advénit thus marks the closure of the Christmas season and the winding down of the seasons in which Christ's humanity, then his divinity veiled by his human nature, are revealed to the world. The biblical verse which prophesizes his final type, John the Baptist, is applied to the King who is the Eternal Son of the Father, the monarch in his own right, just as King Solomon was the son of King David. We could extend this in saying that Christ is the Prophet, proclaiming his own message of the Father's love for his children fulfilling the mission of the one who cried before him. This melody is shared essentially note for note with the introit of Masses of the Common of the Blessed Virgin Mary, \textit{Salve, sancta Parens,} and it is shared with the first Mass of Christmas, \textit{Dóminus dixit.} Indeed, we should recall that so often the church turns to relatively simpler melodies in the plagal modes for the introits of her greatest and most ancient feasts: Christmas, Epiphany, Easter, and Pentecost.
+
+When a minor third is involved as is the case in this mode, the fullness of the chant turns to a certain somberness and even restraint, despite the energy given in the intonation and first incise, which cannot be exaggerated. In gently approaching the dominant and melodic peak, where the chant largely comes to rest, the chant recalls the sweet love of Christ the King. The dominant plays a greater than usual role in the piece, and we should gently prepare the accent of \textit{dominátor} (Ruler) and \textit{potéstas} (power) by interpreting the bistropha properly as a bivirga, before gently coming down in Dóminus (Lord) and \textit{impérium} (dominion, empire, rule, governance all come to mind as translations); conversely, we shoudl give some energy to \textit{et regnum} as we go from the subtonic to the dominant recalling Christ's earthly kingdom but also his eternal one without end.
+
+\textit{Ejus} is not a word of any particular importance; it simply tells us of whose hand is spoken, but this hand is that which finds the lost, heals the sick, blesses the poor and the little ones, divides the sheep from the goats. one imagines, if creatively, that Christ outstretched his hands over the Apostles to give the priestly blessing known to them from the Temple itself on the day of the Ascension as he rose to heaven. Yet the only (group) neume of seven notes, the most in this simple chant, is given on the first syllable of \textit{ejus,} an accented one, certainly, in view of its position, but melodically weak other than this development, coming as preparation for a cadence.
+
+Finally we might consider the melodic restraint and the importance of every note given, that is, every note can be placed either within the modal framework or in relation to it, as contemplation of divine simplicity.
+\end{document}
+
+
+
+
