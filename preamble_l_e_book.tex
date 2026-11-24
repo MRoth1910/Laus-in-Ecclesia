@@ -2,7 +2,28 @@
 %\pagenumbering{gobble}
 \usepackage{fontspec}
 \usepackage[english,french,ecclesiasticlatin.usej,activeacute]{babel}
-     \babelprovide[hyphenrules=latin]{ecclesiasticlatin}
+\babelprovide[hyphenrules=latin]{ecclesiasticlatin}
+
+% ---- Patterns (LuaTeX only) -------------------------------------------
+% N.B. a pattern replaces any existing one with the same letters
+% ("Renew pattern" in the log); TeX takes the max digit at each position.
+\babelpatterns[ecclesiasticlatin]{
+  5mn  m6n
+  5ct  c6t
+  5pt  p6t
+  5ps  p6s
+  re6d5em
+  su6s5c
+  su6s5p
+  su6s5t
+}
+
+% ---- Hyphenmins: forbids isolated single-letter vowels ----------------
+\addto\extrasecclesiasticlatin{\lefthyphenmin=2 \righthyphenmin=2 }
+
+% ---- One-offs ----------------------------------------------------------
+\babelhyphenation[ecclesiasticlatin]{pro-pter}
+\babelhyphenation[ecclesiasticlatin]{sic-ut}
 \usepackage[compact,nobottomtitles]{titlesec}
 \usepackage{fancyhdr}
 \usepackage{needspace}
